@@ -2,10 +2,10 @@ import { Expandable } from '@patternfly/react-core';
 import * as React from 'react';
 
 export type Task = {
-  id: number,
+  id?: number,
   title: string,
   description: string,
-  status: string
+  status?: string
 };
 
 export type TaskProps = {

@@ -1,18 +1,28 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import { Task } from './components/Task';
 import TasksPage from './components/TasksPage';
-import { connect } from 'react-redux';
+import { createTask } from './actions';
 
 type AppProps = {
-  tasks: Task[]
+  tasks: Task[],
+  dispatch: (s: any) => void
 }
 
 class App extends React.Component<AppProps> {
+  onCreateTask = ({ title, description }: Task) => {
+    this.props.dispatch(createTask({ title, description }));
+  };
+
   public render() {
+    console.log('props from App:', this.props);
     return (
       <React.Fragment>
-        <TasksPage tasks={this.props.tasks} />
+        <TasksPage
+          tasks={this.props.tasks}
+          onCreateTask={this.onCreateTask}
+        />
       </React.Fragment>
     );
   }
