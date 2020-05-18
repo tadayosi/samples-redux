@@ -2,22 +2,41 @@
   "name": "redux",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@patternfly/react-core": "^3.112.3",
-    "@types/jest": "24.0.19",
-    "@types/node": "12.11.1",
-    "@types/react": "16.9.9",
-    "@types/react-dom": "16.9.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
-    "typescript": "3.6.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
+    "deploy": "cp build/index.html build/200.html && surge build/ tadayosi-sample-redux.surge.sh",
     "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@patternfly/react-core": "^3.112.3",
+    "@patternfly/react-table": "^2.28.39",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-redux": "^7.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/redux-thunk": "^2.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.10.2",
+    "react-cookie": "^4.0.3",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.2.0",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.6.4",
+    "typescript-fsa": "^3.0.0",
+    "typescript-fsa-reducers": "^1.2.1"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
   },
   "eslintConfig": {
     "extends": "react-app"
