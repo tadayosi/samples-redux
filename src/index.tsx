@@ -3,8 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import './index.css'
-import App from './modules/sample/blog/components/App'
-import store from './modules/sample/blog/store'
+import App from './modules/blog/components/App'
+import store from './modules/blog/store'
 import * as serviceWorker from './serviceWorker'
 
 // for debugging

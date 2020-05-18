@@ -2,7 +2,7 @@ import { Avatar, Button, Card, CardBody, CardFooter, CardHead, CardHeader, CardH
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import avatarImg from '../../../../img/img_avatar.svg'
+import avatarImg from '../../../img/img_avatar.svg'
 import State, { Post, Users } from '../state'
 import AppRouteProps from './types'
 

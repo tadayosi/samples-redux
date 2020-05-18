@@ -1,7 +1,7 @@
 import { Avatar, Card, CardBody, CardHead, CardHeader, CardHeadMain, PageSection, PageSectionVariants } from '@patternfly/react-core'
 import React from 'react'
 import { connect } from 'react-redux'
-import avatarImg from '../../../../img/img_avatar.svg'
+import avatarImg from '../../../img/img_avatar.svg'
 import State, { Users } from '../state'
 import AppRouteProps from './types'
 
