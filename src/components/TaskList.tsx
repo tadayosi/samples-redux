@@ -7,7 +7,7 @@ export type TaskListProps = {
   tasks: Task[];
 }
 
-const TaskList: React.SFC<TaskListProps> = props => {
+const TaskList: React.FunctionComponent<TaskListProps> = props => {
   return (
     <PageSection>
       <Title size="2xl">{props.status}</Title>
