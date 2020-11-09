@@ -14,7 +14,7 @@ import UserView from './UserView'
 
 type AppLayoutProps = AppRouteProps<{}>
 
-const AppLayout: React.SFC<AppLayoutProps> = props => {
+const AppLayout: React.FunctionComponent<AppLayoutProps> = props => {
   const Header = (<AppHeader history={props.history} />)
 
   const Routes = (
@@ -39,7 +39,7 @@ const AppLayout: React.SFC<AppLayoutProps> = props => {
   )
 }
 
-const App: React.SFC<{}> = () =>
+const App: React.FunctionComponent<{}> = () =>
   <BrowserRouter>
     <Route path="/" component={AppLayout} />
   </BrowserRouter>

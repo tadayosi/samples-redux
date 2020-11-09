@@ -11,7 +11,7 @@ type PostListProps = AppRouteProps<{}> & {
   posts: Post[]
 }
 
-const PostList: React.SFC<PostListProps> = props => {
+const PostList: React.FunctionComponent<PostListProps> = props => {
   // cleanup
   props.dispatch(actions.unloadPost({}))
 
